@@ -14,37 +14,7 @@
   apiUrl="http://localhost:8081/api"
   firebaseUid="QORrMqFligdY0iugUk3FuTEEuUR2"
 />
-<>
-  <Section
-    attachmentValue="scroll"
-    backgroundColor="transparent"
-    bottomMarginUnitValue="px"
-    bottomMarginValue=""
-    bottomPaddingUnitValue="px"
-    bottomPaddingValue=""
-    displaySizeValue="auto"
-    leftMarginUnitValue="px"
-    leftMarginValue=""
-    leftPaddingUnitValue="px"
-    leftPaddingValue=""
-    marginAllUnitValue="px"
-    marginAllValue="0"
-    paddingAllUnitValue="px"
-    paddingAllValue="0"
-    positionValue="center center"
-    repeatValue="no-repeat"
-    rightMarginUnitValue="px"
-    rightMarginValue=""
-    rightPaddingUnitValue="px"
-    rightPaddingValue=""
-    topMarginUnitValue="px"
-    topMarginValue=""
-    topPaddingUnitValue="px"
-    topPaddingValue=""
-  >
-    <Container />
-  </Section>
-</>
+<React.Fragment />
       </>
     );
 
