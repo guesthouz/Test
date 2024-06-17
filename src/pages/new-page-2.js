@@ -84,6 +84,16 @@
       />
     </Container>
   </Section>
+  <Button
+    color="#fff"
+    fontFamily="Roboto"
+    fontSizeUnit="px"
+    fontSizeValue="16"
+    fontWeightValue="400"
+    paddingAllUnitValue="px"
+    size="small"
+    text="Button"
+  />
 </>
       </>
     );
