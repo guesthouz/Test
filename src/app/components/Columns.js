@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // Container component for live version
 const Container = ({ children }) => {
   return (
-    <div style={{ maxWidth: '90%', margin: '0 auto', position: 'relative' }}>
+    <div>
       {children}
     </div>
   );
@@ -80,79 +80,75 @@ const Column = ({
 
 // Columns component for live version
 const Columns = ({
-  children,
-  id,
-  numColumns,
-  setNumColumns,
-  backgroundColor,
-  backgroundImage,
-  positionValue,
-  displaySizeValue, 
-  repeatValue,
-  attachmentValue,
-  paddingAllValue, 
-  paddingAllUnit, 
-  topPaddingValue, 
-  topPaddingUnitValue, 
-  rightPaddingValue, 
-  rightPaddingUnitValue, 
-  bottomPaddingValue, 
-  bottomPaddingUnitValue, 
-  leftPaddingValue, 
-  leftPaddingUnitValue,
-  marginAllValue, 
-  marginAllUnit, 
-  topMarginValue, 
-  topMarginUnitValue, 
-  rightMarginValue, 
-  rightMarginUnitValue, 
-  bottomMarginValue, 
-  bottomMarginUnitValue, 
-  leftMarginValue, 
-  leftMarginUnitValue,
-}) => {
-  useEffect(() => {
-    // Retrieve the number of columns from localStorage if it exists, otherwise default to 2
-    const savedNumColumns = localStorage.getItem(`columns-num-${id}`);
-    if (savedNumColumns) {
-      setNumColumns(Number(savedNumColumns));
-    }
-  }, [id, setNumColumns]);
-
-  const combinedStyles = {
+    children,
+    id,
+    numColumns,
+    setNumColumns,
     backgroundColor,
-    backgroundImage: `linear-gradient(0deg, ${backgroundColor}, ${backgroundColor}), url(${backgroundImage})`,
-    backgroundPosition: `${positionValue}`, 
-    backgroundSize: `${displaySizeValue}`, 
-    backgroundRepeat: `${repeatValue}`, 
-    backgroundAttachment: `${attachmentValue}`, 
-    padding: `${paddingAllValue}${paddingAllUnit}`, 
-    paddingTop: `${topPaddingValue}${topPaddingUnitValue}`,
-    paddingRight: `${rightPaddingValue}${rightPaddingUnitValue}`,
-    paddingBottom: `${bottomPaddingValue}${bottomPaddingUnitValue}`,
-    paddingLeft: `${leftPaddingValue}${leftPaddingUnitValue}`,
-    margin: `${marginAllValue}${marginAllUnit}`, 
-    marginTop: `${topMarginValue}${topMarginUnitValue}`,
-    marginRight: `${rightMarginValue}${rightMarginUnitValue}`,
-    marginBottom: `${bottomMarginValue}${bottomMarginUnitValue}`,
-    marginLeft: `${leftMarginValue}${leftMarginUnitValue}`,
-  };
-
-  const renderColumns = () => {
+    backgroundImage,
+    positionValue,
+    displaySizeValue,
+    repeatValue,
+    attachmentValue,
+    paddingAllValue,
+    paddingAllUnit,
+    topPaddingValue,
+    topPaddingUnitValue,
+    rightPaddingValue,
+    rightPaddingUnitValue,
+    bottomPaddingValue,
+    bottomPaddingUnitValue,
+    leftPaddingValue,
+    leftPaddingUnitValue,
+    marginAllValue,
+    marginAllUnit,
+    topMarginValue,
+    topMarginUnitValue,
+    rightMarginValue,
+    rightMarginUnitValue,
+    bottomMarginValue,
+    bottomMarginUnitValue,
+    leftMarginValue,
+    leftMarginUnitValue,
+  }) => {
+    useEffect(() => {
+      // Retrieve the number of columns from localStorage if it exists, otherwise default to 2
+      const savedNumColumns = localStorage.getItem(`columns-num-${id}`);
+      if (savedNumColumns) {
+        setNumColumns(Number(savedNumColumns));
+      }
+    }, [id, setNumColumns]);
+  
+    const combinedStyles = {
+      backgroundColor,
+      backgroundImage: `linear-gradient(0deg, ${backgroundColor}, ${backgroundColor}), url(${backgroundImage})`,
+      backgroundPosition: `${positionValue}`,
+      backgroundSize: `${displaySizeValue}`,
+      backgroundRepeat: `${repeatValue}`,
+      backgroundAttachment: `${attachmentValue}`,
+      padding: `${paddingAllValue}${paddingAllUnit}`,
+      paddingTop: `${topPaddingValue}${topPaddingUnitValue}`,
+      paddingRight: `${rightPaddingValue}${rightPaddingUnitValue}`,
+      paddingBottom: `${bottomPaddingValue}${bottomPaddingUnitValue}`,
+      paddingLeft: `${leftPaddingValue}${leftPaddingUnitValue}`,
+      margin: `${marginAllValue}${marginAllUnit}`,
+      marginTop: `${topMarginValue}${topMarginUnitValue}`,
+      marginRight: `${rightMarginValue}${rightMarginUnitValue}`,
+      marginBottom: `${bottomMarginValue}${bottomMarginUnitValue}`,
+      marginLeft: `${leftMarginValue}${leftMarginUnitValue}`,
+    };
+  
     return (
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', width: '100%', margin: '5px 0', padding: '10px 0' }}>
-        {[...Array(numColumns)].map((_, index) => (
-          <Column key={index} id={`Column ${index + 1}`} style={{ flex: 1 }} />
-        ))}
+      <div style={{ ...combinedStyles, maxWidth: '100%', margin: '0 auto', position: 'relative', display: 'flex' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', width: '100%', margin: '5px 0', padding: '10px 0' }}>
+          {React.Children.map(children, (child, index) => (
+            <Column key={index} id={`Column ${index + 1}`} style={{ flex: 1 }}>
+              {child}
+            </Column>
+          ))}
+        </div>
       </div>
     );
   };
-
-  return (
-    <div style={{ ...combinedStyles, maxWidth: '100%', margin: '0 auto', position: 'relative', display: 'flex' }}>
-      {renderColumns()}
-    </div>
-  );
-};
 
 export default { Container, Columns, Column };
