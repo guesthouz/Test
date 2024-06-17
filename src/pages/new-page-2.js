@@ -14,7 +14,77 @@
   apiUrl="http://localhost:8081/api"
   firebaseUid="QORrMqFligdY0iugUk3FuTEEuUR2"
 />
-<React.Fragment />
+<>
+  <Section
+    attachmentValue="scroll"
+    backgroundColor="transparent"
+    bottomMarginUnitValue="px"
+    bottomMarginValue=""
+    bottomPaddingUnitValue="px"
+    bottomPaddingValue=""
+    displaySizeValue="auto"
+    leftMarginUnitValue="px"
+    leftMarginValue=""
+    leftPaddingUnitValue="px"
+    leftPaddingValue=""
+    marginAllUnitValue="px"
+    marginAllValue="0"
+    paddingAllUnitValue="px"
+    paddingAllValue="0"
+    positionValue="center center"
+    repeatValue="no-repeat"
+    rightMarginUnitValue="px"
+    rightMarginValue=""
+    rightPaddingUnitValue="px"
+    rightPaddingValue=""
+    topMarginUnitValue="px"
+    topMarginValue=""
+    topPaddingUnitValue="px"
+    topPaddingValue=""
+  >
+    <Container>
+      <Text
+        attachmentValue="scroll"
+        backgroundColor="transparent"
+        bottomMarginUnitValue="px"
+        bottomMarginValue=""
+        bottomPaddingUnitValue="px"
+        bottomPaddingValue=""
+        color="#000"
+        displaySizeValue="auto"
+        fontFamily="Roboto"
+        fontSizeUnit="px"
+        fontSizeValue="16"
+        fontWeightValue="400"
+        leftMarginUnitValue="px"
+        leftMarginValue=""
+        leftPaddingUnitValue="px"
+        leftPaddingValue=""
+        lineHeightUnit="px"
+        lineHeightValue=""
+        marginAllUnitValue="px"
+        marginAllValue="0"
+        paddingAllUnitValue="px"
+        paddingAllValue="0"
+        positionValue="center center"
+        repeatValue="no-repeat"
+        rightMarginUnitValue="px"
+        rightMarginValue=""
+        rightPaddingUnitValue="px"
+        rightPaddingValue=""
+        spacingUnit="px"
+        spacingValue=""
+        text="Insert your text here"
+        textAlign="left"
+        textDecorationValue="none"
+        topMarginUnitValue="px"
+        topMarginValue=""
+        topPaddingUnitValue="px"
+        topPaddingValue=""
+      />
+    </Container>
+  </Section>
+</>
       </>
     );
 
