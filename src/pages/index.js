@@ -4,7 +4,7 @@
     import SectionComponents from '@/app/components/Section';
     const { Container, Section } = SectionComponents;
     import ColumnComponents from '@/app/components/Columns';
-    const { ColContainer, Columns, Column  } = ColumnComponents;
+    const { Columns, Column  } = ColumnComponents;
     import PropertySearch from '@/app/components/PropertySearch';
     import Text from '@/app/components/Text';
     import Navigation from '@/app/components/Navigation';
@@ -253,37 +253,7 @@
           topMarginValue="0"
           topPaddingUnitValue="px"
           topPaddingValue="0"
-        >
-          <Section
-            attachmentValue="scroll"
-            backgroundColor="transparent"
-            bottomMarginUnitValue="px"
-            bottomMarginValue=""
-            bottomPaddingUnitValue="px"
-            bottomPaddingValue=""
-            displaySizeValue="auto"
-            leftMarginUnitValue="px"
-            leftMarginValue=""
-            leftPaddingUnitValue="px"
-            leftPaddingValue=""
-            marginAllUnitValue="px"
-            marginAllValue="0"
-            paddingAllUnitValue="px"
-            paddingAllValue="0"
-            positionValue="center center"
-            repeatValue="no-repeat"
-            rightMarginUnitValue="px"
-            rightMarginValue=""
-            rightPaddingUnitValue="px"
-            rightPaddingValue=""
-            topMarginUnitValue="px"
-            topMarginValue=""
-            topPaddingUnitValue="px"
-            topPaddingValue=""
-          >
-            <Container />
-          </Section>
-        </Column>
+        />
       </Columns>
     </Container>
   </Section>
