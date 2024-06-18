@@ -63,9 +63,9 @@ const Column = ({
   return (
     <div style={parentStyles}>
       {React.Children.map(children, (child, index) => (
-        <div key={index} style={childStyles}>
+        <Column key={index} style={childStyles}>
           {child}
-        </div>
+        </Column>
       ))}
     </div>
   );
