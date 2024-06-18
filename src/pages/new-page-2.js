@@ -4,7 +4,7 @@
     import SectionComponents from '@/app/components/Section';
     const { Container, Section } = SectionComponents;
     import ColumnComponents from '@/app/components/Columns';
-    const { ColContainer, Columns, Column  } = ColumnComponents;
+    const { Columns, Column  } = ColumnComponents;
     import PropertySearch from '@/app/components/PropertySearch';
     import Text from '@/app/components/Text';
     import Navigation from '@/app/components/Navigation';
