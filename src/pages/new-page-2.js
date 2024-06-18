@@ -3,7 +3,8 @@
     import Button from '@/app/components/Button';
     import SectionComponents from '@/app/components/Section';
     const { Container, Section } = SectionComponents;
-    import Column from '@/app/components/Columns';
+    import ColumnComponents from '@/app/components/Columns';
+    const { Columns, Column  } = ColumnComponents;
     import PropertySearch from '@/app/components/PropertySearch';
     import Text from '@/app/components/Text';
     import Navigation from '@/app/components/Navigation';
@@ -96,6 +97,152 @@
     size="small"
     text="Button"
   />
+  <Columns>
+    <Column
+      VerticalAlign=""
+      align=""
+      attachmentValue=""
+      backgroundColor=""
+      bottomMarginUnitValue="px"
+      bottomMarginValue=""
+      bottomPaddingUnitValue="px"
+      bottomPaddingValue=""
+      displayValue=""
+      leftMarginUnitValue="px"
+      leftMarginValue=""
+      leftPaddingUnitValue="px"
+      leftPaddingValue=""
+      marginAllUnitValue="px"
+      marginAllValue=""
+      paddingAllUnitValue="px"
+      paddingAllValue=""
+      positionValue=""
+      repeatValue=""
+      rightMarginUnitValue="px"
+      rightMarginValue=""
+      rightPaddingUnitValue="px"
+      rightPaddingValue=""
+      style={{
+        flex: 1
+      }}
+      topMarginUnitValue="px"
+      topMarginValue=""
+      topPaddingUnitValue="px"
+      topPaddingValue=""
+    >
+      <Text
+        attachmentValue="scroll"
+        backgroundColor="transparent"
+        bottomMarginUnitValue="px"
+        bottomMarginValue=""
+        bottomPaddingUnitValue="px"
+        bottomPaddingValue=""
+        color="#000"
+        displaySizeValue="auto"
+        fontFamily="Roboto"
+        fontSizeUnit="px"
+        fontSizeValue="16"
+        fontWeightValue="400"
+        leftMarginUnitValue="px"
+        leftMarginValue=""
+        leftPaddingUnitValue="px"
+        leftPaddingValue=""
+        lineHeightUnit="px"
+        lineHeightValue=""
+        marginAllUnitValue="px"
+        marginAllValue="0"
+        paddingAllUnitValue="px"
+        paddingAllValue="0"
+        positionValue="center center"
+        repeatValue="no-repeat"
+        rightMarginUnitValue="px"
+        rightMarginValue=""
+        rightPaddingUnitValue="px"
+        rightPaddingValue=""
+        spacingUnit="px"
+        spacingValue=""
+        text="Insert your text here"
+        textAlign="left"
+        textDecorationValue="none"
+        topMarginUnitValue="px"
+        topMarginValue=""
+        topPaddingUnitValue="px"
+        topPaddingValue=""
+      />
+    </Column>
+    <Column
+      VerticalAlign=""
+      align=""
+      attachmentValue=""
+      backgroundColor=""
+      bottomMarginUnitValue="px"
+      bottomMarginValue=""
+      bottomPaddingUnitValue="px"
+      bottomPaddingValue=""
+      displayValue=""
+      leftMarginUnitValue="px"
+      leftMarginValue=""
+      leftPaddingUnitValue="px"
+      leftPaddingValue=""
+      marginAllUnitValue="px"
+      marginAllValue=""
+      paddingAllUnitValue="px"
+      paddingAllValue=""
+      positionValue=""
+      repeatValue=""
+      rightMarginUnitValue="px"
+      rightMarginValue=""
+      rightPaddingUnitValue="px"
+      rightPaddingValue=""
+      style={{
+        flex: 1
+      }}
+      topMarginUnitValue="px"
+      topMarginValue=""
+      topPaddingUnitValue="px"
+      topPaddingValue=""
+    >
+      <Text
+        attachmentValue="scroll"
+        backgroundColor="transparent"
+        bottomMarginUnitValue="px"
+        bottomMarginValue=""
+        bottomPaddingUnitValue="px"
+        bottomPaddingValue=""
+        color="#000"
+        displaySizeValue="auto"
+        fontFamily="Roboto"
+        fontSizeUnit="px"
+        fontSizeValue="16"
+        fontWeightValue="400"
+        leftMarginUnitValue="px"
+        leftMarginValue=""
+        leftPaddingUnitValue="px"
+        leftPaddingValue=""
+        lineHeightUnit="px"
+        lineHeightValue=""
+        marginAllUnitValue="px"
+        marginAllValue="0"
+        paddingAllUnitValue="px"
+        paddingAllValue="0"
+        positionValue="center center"
+        repeatValue="no-repeat"
+        rightMarginUnitValue="px"
+        rightMarginValue=""
+        rightPaddingUnitValue="px"
+        rightPaddingValue=""
+        spacingUnit="px"
+        spacingValue=""
+        text="Insert your text here"
+        textAlign="left"
+        textDecorationValue="none"
+        topMarginUnitValue="px"
+        topMarginValue=""
+        topPaddingUnitValue="px"
+        topPaddingValue=""
+      />
+    </Column>
+  </Columns>
 </>
       </>
     );
