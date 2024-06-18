@@ -253,7 +253,37 @@
           topMarginValue="0"
           topPaddingUnitValue="px"
           topPaddingValue="0"
-        />
+        >
+          <Section
+            attachmentValue="scroll"
+            backgroundColor="transparent"
+            bottomMarginUnitValue="px"
+            bottomMarginValue=""
+            bottomPaddingUnitValue="px"
+            bottomPaddingValue=""
+            displaySizeValue="auto"
+            leftMarginUnitValue="px"
+            leftMarginValue=""
+            leftPaddingUnitValue="px"
+            leftPaddingValue=""
+            marginAllUnitValue="px"
+            marginAllValue="0"
+            paddingAllUnitValue="px"
+            paddingAllValue="0"
+            positionValue="center center"
+            repeatValue="no-repeat"
+            rightMarginUnitValue="px"
+            rightMarginValue=""
+            rightPaddingUnitValue="px"
+            rightPaddingValue=""
+            topMarginUnitValue="px"
+            topMarginValue=""
+            topPaddingUnitValue="px"
+            topPaddingValue=""
+          >
+            <Container />
+          </Section>
+        </Column>
       </Columns>
     </Container>
   </Section>
@@ -355,74 +385,6 @@
       </Columns>
     </Container>
   </Section>
-  <Columns>
-    <Column
-      VerticalAlign="center"
-      align="start"
-      attachmentValue="scroll"
-      backgroundColor="#b2b2b266"
-      bottomMarginUnitValue="px"
-      bottomMarginValue=""
-      bottomPaddingUnitValue="px"
-      bottomPaddingValue=""
-      displayValue="block"
-      leftMarginUnitValue="px"
-      leftMarginValue=""
-      leftPaddingUnitValue="px"
-      leftPaddingValue=""
-      marginAllUnitValue="px"
-      marginAllValue=""
-      paddingAllUnitValue="px"
-      paddingAllValue=""
-      positionValue="center center"
-      repeatValue="no-repeat"
-      rightMarginUnitValue="px"
-      rightMarginValue=""
-      rightPaddingUnitValue="px"
-      rightPaddingValue=""
-      style={{
-        flex: 1
-      }}
-      topMarginUnitValue="px"
-      topMarginValue=""
-      topPaddingUnitValue="px"
-      topPaddingValue=""
-    >
-      <PropertySearch />
-    </Column>
-    <Column
-      VerticalAlign="center"
-      align="start"
-      attachmentValue="scroll"
-      backgroundColor="#b2b2b266"
-      bottomMarginUnitValue="px"
-      bottomMarginValue=""
-      bottomPaddingUnitValue="px"
-      bottomPaddingValue=""
-      displayValue="block"
-      leftMarginUnitValue="px"
-      leftMarginValue=""
-      leftPaddingUnitValue="px"
-      leftPaddingValue=""
-      marginAllUnitValue="px"
-      marginAllValue=""
-      paddingAllUnitValue="px"
-      paddingAllValue=""
-      positionValue="center center"
-      repeatValue="no-repeat"
-      rightMarginUnitValue="px"
-      rightMarginValue=""
-      rightPaddingUnitValue="px"
-      rightPaddingValue=""
-      style={{
-        flex: 1
-      }}
-      topMarginUnitValue="px"
-      topMarginValue=""
-      topPaddingUnitValue="px"
-      topPaddingValue=""
-    />
-  </Columns>
 </>
       </>
     );
