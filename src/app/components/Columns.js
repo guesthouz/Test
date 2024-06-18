@@ -1,74 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-// Column component with combined functionality
-const Column = ({
-  children,
-  backgroundColor,
-  backgroundImage,
-  positionValue,
-  displaySizeValue, 
-  repeatValue,
-  attachmentValue,
-  paddingAllValue, 
-  paddingAllUnit, 
-  topPaddingValue, 
-  topPaddingUnitValue, 
-  rightPaddingValue, 
-  rightPaddingUnitValue, 
-  bottomPaddingValue, 
-  bottomPaddingUnitValue, 
-  leftPaddingValue, 
-  leftPaddingUnitValue,
-  marginAllValue, 
-  marginAllUnit, 
-  topMarginValue, 
-  topMarginUnitValue, 
-  rightMarginValue, 
-  rightMarginUnitValue, 
-  bottomMarginValue, 
-  bottomMarginUnitValue, 
-  leftMarginValue, 
-  leftMarginUnitValue,
-}) => {
-  const parentStyles = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '15px',
-    width: '100%',
-    margin: '5px 0px',
-    padding: '10px 0px',
-    backgroundColor,
-    backgroundImage: `linear-gradient(0deg, ${backgroundColor}, ${backgroundColor}), url(${backgroundImage})`,
-    backgroundPosition: positionValue, 
-    backgroundSize: displaySizeValue, 
-    backgroundRepeat: repeatValue, 
-    backgroundAttachment: attachmentValue, 
-    padding: `${paddingAllValue}${paddingAllUnit}`, 
-    paddingTop: `${topPaddingValue}${topPaddingUnitValue}`,
-    paddingRight: `${rightPaddingValue}${rightPaddingUnitValue}`,
-    paddingBottom: `${bottomPaddingValue}${bottomPaddingUnitValue}`,
-    paddingLeft: `${leftPaddingValue}${leftPaddingUnitValue}`,
-    margin: `${marginAllValue}${marginAllUnit}`, 
-    marginTop: `${topMarginValue}${topMarginUnitValue}`,
-    marginRight: `${rightMarginValue}${rightMarginUnitValue}`,
-    marginBottom: `${bottomMarginValue}${bottomMarginUnitValue}`,
-    marginLeft: `${leftMarginValue}${leftMarginUnitValue}`,
+// Column component for live version
+const Column = ({children}) => {
+
+    return (
+      <div style={{ display:'flex', flexWrap:'wrap', gap:'15px', width:'100%', margin:'5px 0px', padding:'10px 0px'}}>
+        {children}
+      </div>
+    );
   };
 
-  const childStyles = {
+// Columns component for live version
+const Columns = ({
+  children,
+}) => {
+  const combinedStyles = {
     flex: '1 1 0%',
     display: 'block',
   };
 
   return (
-    <div style={parentStyles}>
-      {React.Children.map(children, (child, index) => (
-        <Column key={index} style={childStyles}>
-          {child}
-        </Column>
-      ))}
-    </div>
+      <div>
+        {React.Children.map(children, (child, index) => (
+          <Column style={{combinedStyles}} key={index} id={`Column ${index + 1}`}>
+            {child}
+          </Column>
+        ))}
+      </div>
   );
 };
 
-export default Column;
+export default {Columns, Column };
