@@ -44,7 +44,9 @@
     topPaddingUnitValue="px"
     topPaddingValue="80"
   >
-    <Container />
+    <Container>
+      <Columns />
+    </Container>
   </Section>
   <Section
     attachmentValue="scroll"
@@ -73,8 +75,11 @@
     topPaddingUnitValue="px"
     topPaddingValue="10"
   >
-    <Container />
+    <Container>
+      <Columns />
+    </Container>
   </Section>
+  <Columns />
 </>
       </>
     );
