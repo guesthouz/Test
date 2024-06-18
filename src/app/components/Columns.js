@@ -12,7 +12,6 @@ const ColContainer = ({ children }) => {
 // Column component for live version
 const Column = ({
   children,
-  style,
   backgroundColor,
   backgroundImage,
   positionValue,
@@ -42,7 +41,6 @@ const Column = ({
   displayValue,
   align,
   verticalAlign,
-  id,
 }) => {
   const combinedStyles = {
     backgroundColor,
@@ -76,7 +74,6 @@ const Column = ({
 // Columns component for live version
 const Columns = ({
   children,
-  numColumns,
   backgroundColor,
   backgroundImage,
   positionValue,
@@ -124,15 +121,13 @@ const Columns = ({
   };
 
   return (
-    <div style={{ ...combinedStyles, maxWidth: '100%', margin: '0 auto', position: 'relative', display: 'flex' }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', width: '100%', margin: '5px 0', padding: '10px 0' }}>
+      <div>
         {React.Children.map(children, (child, index) => (
-          <Column key={index} id={`Column ${index + 1}`} style={{ flex: 1 }}>
+          <Column key={index} id={`Column ${index + 1}`}>
             {child}
           </Column>
         ))}
       </div>
-    </div>
   );
 };
 
