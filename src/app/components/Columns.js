@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-// Column component for live version
-const Column = ({children}) => {
-
-    return (
-      <div style={{ display:'flex'}}>
-        {children}
-      </div>
-    );
-  };
-
-// Columns component for live version
-const Columns = ({
+// Column component with combined functionality
+const Column = ({
   children,
   backgroundColor,
   backgroundImage,
@@ -40,13 +30,19 @@ const Columns = ({
   leftMarginValue, 
   leftMarginUnitValue,
 }) => {
-  const combinedStyles = {
+  const parentStyles = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '15px',
+    width: '100%',
+    margin: '5px 0px',
+    padding: '10px 0px',
     backgroundColor,
     backgroundImage: `linear-gradient(0deg, ${backgroundColor}, ${backgroundColor}), url(${backgroundImage})`,
-    backgroundPosition: `${positionValue}`, 
-    backgroundSize: `${displaySizeValue}`, 
-    backgroundRepeat: `${repeatValue}`, 
-    backgroundAttachment: `${attachmentValue}`, 
+    backgroundPosition: positionValue, 
+    backgroundSize: displaySizeValue, 
+    backgroundRepeat: repeatValue, 
+    backgroundAttachment: attachmentValue, 
     padding: `${paddingAllValue}${paddingAllUnit}`, 
     paddingTop: `${topPaddingValue}${topPaddingUnitValue}`,
     paddingRight: `${rightPaddingValue}${rightPaddingUnitValue}`,
@@ -59,15 +55,20 @@ const Columns = ({
     marginLeft: `${leftMarginValue}${leftMarginUnitValue}`,
   };
 
+  const childStyles = {
+    flex: '1 1 0%',
+    display: 'block',
+  };
+
   return (
-      <div style={{combinedStyles}}>
-        {React.Children.map(children, (child, index) => (
-          <Column key={index} id={`Column ${index + 1}`}>
-            {child}
-          </Column>
-        ))}
-      </div>
+    <div style={parentStyles}>
+      {React.Children.map(children, (child, index) => (
+        <div key={index} style={childStyles}>
+          {child}
+        </div>
+      ))}
+    </div>
   );
 };
 
-export default {Columns, Column };
+export default Column;
