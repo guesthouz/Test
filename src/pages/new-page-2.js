@@ -94,8 +94,8 @@
     size="small"
     text="Button"
   />
-  <Columns />
-  <Columns />
+  <Columns numColumns={undefined} />
+  <Columns numColumns={undefined} />
 </>
       </>
     );
