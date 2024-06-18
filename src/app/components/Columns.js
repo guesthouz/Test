@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Column component for live version
 const Column = ({children}) => {
-  return (
-    <div style={{ flex: '1 1 0%' }}>
-      {children}
-    </div>
-  );
-};
+
+    return (
+      <div style={{ flex:'1 1 0%'}}>
+        {children}
+      </div>
+    );
+  };
 
 // Columns component for live version
-const Columns = ({ children }) => {
-  const containerStyles = {
+const Columns = ({
+  children,
+}) => {
+  const combinedStyles = {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '15px',
@@ -21,14 +24,14 @@ const Columns = ({ children }) => {
   };
 
   return (
-    <div style={containerStyles}>
-      {React.Children.map(children, (child, index) => (
-        <Column key={index} id={`Column ${index + 1}`}>
-          {child}
-        </Column>
-      ))}
-    </div>
+    <div style={combinedStyles}>
+        {React.Children.map(children, (child, index) => (
+          <Column key={index} id={`Column ${index + 1}`}>
+            {child}
+          </Column>
+        ))}
+      </div>
   );
 };
 
-export default { Columns, Column };
+export default {Columns, Column };
