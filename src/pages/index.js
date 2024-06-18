@@ -45,7 +45,7 @@
     topPaddingValue="80"
   >
     <Container>
-      <Columns />
+      <Columns numColumns={undefined} />
     </Container>
   </Section>
   <Section
@@ -76,10 +76,10 @@
     topPaddingValue="10"
   >
     <Container>
-      <Columns />
+      <Columns numColumns={undefined} />
     </Container>
   </Section>
-  <Columns />
+  <Columns numColumns={undefined} />
 </>
       </>
     );
